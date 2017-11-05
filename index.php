@@ -12,7 +12,19 @@
  * @package grupomiquel
  */
 
-get_header(); ?>
+get_header(); 
+
+$promocionados_lista = array();
+$valores_miquel_lista = array();
+$nuestros_proyectos_lista = array();
+$numero_promocionados=1;
+$numero_valores_miquel=1;
+$numero_nuestros_proyectos=1;
+global $post;
+/*	grupomiquel_console($promocionados_lista); 
+					grupomiquel_console($valores_miquel_lista); 
+					grupomiquel_console($nuestros_proyectos_lista); */
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -28,19 +40,136 @@ get_header(); ?>
 			<?php
 			endif;
 
-			/* Start the Loop */
+			/*Guardo los posts de cada categoría en un array distinto*/
 			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ( in_category( 'promocionados' ) && $numero_promocionados < 4){
+					array_push( $promocionados_lista, $post );	
+					$numero_promocionados++;
+				}
+				elseif 	( in_category( 'valores-miquel' ) && $numero_valores_miquel < 4){
+					array_push( $valores_miquel_lista, $post );	
+					$numero_valores_miquel++;
+				}
+				elseif 	( in_category( 'nuestros-proyectos' ) && $numero_nuestros_proyectos < 4){
+					array_push( $nuestros_proyectos_lista, $post  );
+					$numero_nuestros_proyectos++;
+				}
 
 			endwhile;
+	
+		
 
-			the_posts_navigation();
+			/* Sección Promocionados */
+		
+?>
+						<section id="promocionados" class="post">
+				            <div class="container container- animated fadeInUp">
+				                <div class="row row-titles">
+				                    <div class="col-lg-12 text-center">
+				                        <h2 class="section-heading">¡Los promocionados!</h2>
+				                    </div>
+				                    <div class="col-lg-9 text-center">
+				                        <img class="img-responsive text-center" src="img/linea.png">
+				                    </div>
+				                </div>
+				                <div class="row text-center promocionados">
+
+				          <?php    foreach ($promocionados_lista as $article) {
+				          ?>	
+				                    <div class="col-md-4">
+				                        <img src="img/promocionados/promocionado-1.jpg" class="profile img-responsive" alt="Promocionado" title="Promocionado">
+				                        <h4 class="service-heading"><?php echo esc_html( $article->post_title ); ?></h4>
+				                        <p class="sector"><?php //get_post_meta( $post->ID, 'horoscopo_work', $single = true ); ?></p>
+				                        <span class="line2">-</span>
+				                        <p class="text-muted"><?php echo esc_html( $article->post_excerpt ); ?></p>
+				                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                    </div>
+
+				          <?php   }  	?> 
+
+	
+
+				 <!-- Sección Valores Miquel--> 
+			
+				        <section id="portfolio" class="bg-light post">
+				            <div class="container">
+				                <div class="row row-titles">
+				                    <div class="col-lg-12 text-center">
+				                        <h2 class="section-heading">Valores Miquel</h2>
+				                    </div>
+				                    <div class="col-lg-9 text-center">
+				                        <img class="img-responsive text-center" src="img/linea.png">
+				                    </div>
+				                </div>
+				                <div class="row">
+				                    <div class="col-lg-7 col-sm-12">
+				                        <div class="row">
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+				                                    <div class="portfolio-hover">
+				                                        <div class="portfolio-hover-content">
+				                                            <i class="fa fa-plus fa-1x"></i>
+				                                        </div>
+				                                    </div>
+				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                </a>
+				                            </div>
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                                <p class="date"><?php echo esc_html( $valores_miquel_lista[0]->post_date ); ?></p>
+				                                <p class="title-note"><span class="cien"><?php echo esc_html( $valores_miquel_lista[0]->post_title ); ?></p>
+				                                <p class="text-note"><?php echo esc_html( $valores_miquel_lista[0]->post_excerpt); ?></p>
+				                                <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="col-lg-4 col-sm-12">
+				                        <div class="row">
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+				                                    <div class="portfolio-hover">
+				                                        <div class="portfolio-hover-content">
+				                                            <i class="fa fa-plus fa-1x"></i>
+				                                        </div>
+				                                    </div>
+				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                </a>
+				                            </div>
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                                <p class="date-small"><?php echo esc_html( $valores_miquel_lista[1]->post_date ); ?></p>
+				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[1]->post_title ); ?></p>
+				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</button>
+				                            </div>
+				                        </div>
+				                        <div class="row">
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+				                                    <div class="portfolio-hover">
+				                                        <div class="portfolio-hover-content">
+				                                            <i class="fa fa-plus fa-1x"></i>
+				                                        </div>
+				                                    </div>
+				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                </a>
+				                            </div>
+				                            <div class="col-md-6 col-sm-12 portfolio-item">
+				                               	<p class="date-small"><?php echo esc_html( $valores_miquel_lista[2]->post_date ); ?></p>
+				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[2]->post_title ); ?></p>
+				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</button>
+				                            </div>
+				                        </div>
+				                        
+				                    </div>
+				                </div>
+				            </div>
+				        </section> -->
+				}
+	
+							    </div>
+				            </div>
+				        </section>
+		<?php		        
+			//the_posts_navigation();
 
 		else :
 
@@ -52,5 +181,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

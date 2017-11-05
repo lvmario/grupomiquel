@@ -1,0 +1,218 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Bitter:400,700);
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	margin:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:bottom;
+}
+/*La Opinion Styles*/
+body.laopinion{
+	background-color:#f0f0f0;
+}
+.laopinion .highlights{
+	width:300px;
+	margin:0 0 20px 0;
+	height:280px;
+}
+.laopinion .highlights .category{
+	position:absolute;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	background-color:#000;
+	padding:2px;
+	margin:5px 0 0 5px;
+	text-transform:Uppercase;
+	font-weight:700;
+	color:#FFF;
+}
+.laopinion .highlights .datetime{
+	color:#bbbbbb;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	margin:5px 10px;
+	display:block;
+}
+.laopinion .highlights p.picture{
+	max-height:140px;
+	overflow:hidden;
+}
+.laopinion .highlights img{
+	width:100%;
+}
+.laopinion .highlights h2{
+	font-weight:700;
+	font-size:20px;
+	font-family: 'Bitter', serif;
+	margin:0 10px;
+	color:#000;
+}
+/*El Diario Styles*/
+body.eldiario{
+	background-color:#f0f0f0;
+}
+.eldiario .highlights{
+	width:300px;
+	margin:0 0 20px 0;
+	height:280px;
+}
+.eldiario .highlights .category{
+	position:absolute;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	background-color:#000;
+	padding:2px;
+	margin:5px 0 0 5px;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#FFF;
+}
+.eldiario .highlights .datetime{
+	color:#bbbbbb;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	margin:5px 10px;
+	display:block;
+}
+.eldiario .highlights p.picture{
+	max-height:140px;
+	overflow:hidden;
+}
+.eldiario .highlights img{
+	width:100%;
+}
+.eldiario .highlights h2{
+	font-weight:700;
+	font-size:20px;
+	font-family: 'Bitter', serif;
+	margin:0 10px;
+	color:#000;
+}
+/*La Prensa Styles*/
+body.laprensa{
+	background-color:#FFF;
+	border:1px solid #cfcfcf;
+}
+.laprensa .highlights{
+	width:288px;
+	margin:5px;
+	height:238px;
+	background-color:#f0f0f0;
+}
+.laprensa .highlights .category{
+	position:absolute;
+	font-family:Georgia, Georgia1, serif;
+	font-size:12px;
+	background-color:#000;
+	padding:2px;
+	margin:5px 0 0 5px;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#FFF;
+}
+.laprensa .highlights .datetime{
+	display:none;
+}
+.laprensa .highlights p.picture{
+	max-height:150px;
+	overflow:hidden;
+}
+.laprensa .highlights img{
+	width:100%;
+}
+.laprensa .highlights h2{
+	font-weight:700;
+	font-size:20px;
+	font-family: Georgia, Georgia1, serif;
+	margin:10px 10px 0 10px;
+	color:#000;
+}
+
+/*La Raza Styles*/
+body.laraza{
+	background-color:#FFF;
+	border:1px solid #cfcfcf;
+}
+.laraza .highlights{
+	width:288px;
+	margin:5px;
+	height:238px;
+	background-color:#f0f0f0;
+}
+.laraza .highlights .category{
+	position:absolute;
+	font-family:Georgia, Georgia1, serif;
+	font-size:12px;
+	background-color:#000;
+	padding:2px;
+	margin:5px 0 0 5px;
+	text-transform:Uppercase;
+	font-weight:700;
+	color:#FFF;
+}
+.laraza .highlights .datetime{
+	display:none;
+}
+.laraza .highlights p.picture{
+	max-height:150px;
+	overflow:hidden;
+}
+.laraza .highlights img{
+	width:100%;
+}
+.laraza .highlights h2{
+	font-weight:700;
+	font-size:20px;
+	font-family: Georgia, Georgia1, serif;
+	margin:10px 10px 0 10px;
+	color:#000;
+}
+
+/*Para ti Mujer Styles*/
+body.paratimujer{
+	background-color:#f0f0f0;
+}
+.paratimujer .highlights{
+	width:300px;
+	margin:0 0 20px 0;
+	height:280px;
+}
+.paratimujer .highlights .category{
+	position:absolute;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	background-color:#000;
+	padding:2px;
+	margin:5px 0 0 5px;
+	text-transform:Uppercase;
+	font-weight:700;
+	color:#FFF;
+}
+.paratimujer .highlights .datetime{
+	color:#bbbbbb;
+	font-family:"Open Sans", serif;
+	font-size:11px;
+	margin:5px 10px;
+	display:none;
+}
+.paratimujer .highlights p.picture{
+	height:150px;
+	overflow:hidden;
+}
+.paratimujer .highlights img{
+	width:100%;
+}
+.paratimujer .highlights h2{
+	font-weight:300;
+	font-family: "Open Sans",serif;
+	font-size: 24px;
+	margin:0 10px;
+	color:#000;
+}
