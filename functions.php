@@ -117,8 +117,11 @@ add_action( 'widgets_init', 'grupomiquel_widgets_init' );
  * Enqueue scripts and styles.
  */
 function grupomiquel_scripts() {
-	wp_enqueue_style( 'grupomiquel-style', get_stylesheet_uri() );
-
+	wp_enqueue_style( 'grupomiquel-style', get_template_directory_uri(). '/assets/css/miquel.min.css');
+	wp_enqueue_style( 'grupomiquel-style2', get_template_directory_uri(). '/assets/css/miquel-.css');
+	wp_enqueue_style( 'grupomiquel-style3', get_template_directory_uri(). '/assets/css/hover-min.css');
+	wp_enqueue_style( 'grupomiquel-style4', get_template_directory_uri(). '/assets/css/animate.min.css');
+	wp_enqueue_script('jQuery' ,'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	wp_enqueue_script( 'grupomiquel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'grupomiquel-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

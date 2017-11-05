@@ -17,13 +17,12 @@ get_header();
 $promocionados_lista = array();
 $valores_miquel_lista = array();
 $nuestros_proyectos_lista = array();
+$plan_de_formacion_lista = array();
 $numero_promocionados=1;
 $numero_valores_miquel=1;
 $numero_nuestros_proyectos=1;
 global $post;
-/*	grupomiquel_console($promocionados_lista); 
-					grupomiquel_console($valores_miquel_lista); 
-					grupomiquel_console($nuestros_proyectos_lista); */
+		
 ?>
 
 	<div id="primary" class="content-area">
@@ -52,12 +51,17 @@ global $post;
 					$numero_valores_miquel++;
 				}
 				elseif 	( in_category( 'nuestros-proyectos' ) && $numero_nuestros_proyectos < 4){
-					array_push( $nuestros_proyectos_lista, $post  );
+					array_push( $nuestros_proyectos_lista, $post );
 					$numero_nuestros_proyectos++;
+				}
+				elseif 	( in_category( 'proyecto-de-formacion' ) ){
+					array_push( $plan_de_formacion_lista, $post );
 				}
 
 			endwhile;
-	
+				/*	grupomiquel_console($promocionados_lista); 
+					grupomiquel_console($valores_miquel_lista); 
+					grupomiquel_console($nuestros_proyectos_lista); */
 		
 
 			/* Sección Promocionados */
@@ -70,7 +74,7 @@ global $post;
 				                        <h2 class="section-heading">¡Los promocionados!</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                        <img class="img-responsive text-center" src="img/linea.png">
+				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				                <div class="row text-center promocionados">
@@ -78,7 +82,7 @@ global $post;
 				          <?php    foreach ($promocionados_lista as $article) {
 				          ?>	
 				                    <div class="col-md-4">
-				                        <img src="img/promocionados/promocionado-1.jpg" class="profile img-responsive" alt="Promocionado" title="Promocionado">
+				                        <img src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' class="profile img-responsive" alt="Promocionado" title="Promocionado">
 				                        <h4 class="service-heading"><?php echo esc_html( $article->post_title ); ?></h4>
 				                        <p class="sector"><?php //get_post_meta( $post->ID, 'horoscopo_work', $single = true ); ?></p>
 				                        <span class="line2">-</span>
@@ -88,6 +92,9 @@ global $post;
 
 				          <?php   }  	?> 
 
+							    </div>
+				            </div>
+				        </section>
 	
 
 				 <!-- Sección Valores Miquel--> 
@@ -99,7 +106,7 @@ global $post;
 				                        <h2 class="section-heading">Valores Miquel</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                        <img class="img-responsive text-center" src="img/linea.png">
+				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				                <div class="row">
@@ -112,7 +119,7 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[0]->ID); ?>' alt="Valores Miquel" title="Valores Miquel">
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
@@ -132,7 +139,7 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[1]->ID); ?>' alt="Valores Miquel" title="Valores Miquel">
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
@@ -149,7 +156,7 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src="img/valores-miquel/note.jpg" alt="Valores Miquel" title="Valores Miquel">
+				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[2]->ID);?>' alt="Valores Miquel" title="Valores Miquel">
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
@@ -163,11 +170,94 @@ global $post;
 				                </div>
 				            </div>
 				        </section> -->
-				}
-	
-							    </div>
+
+
+			  <!-- Sección Nuestros Proyectos -->
+				        <section id="portfolio">
+				            <div class="container">
+				                <div class="row row-titles">
+				                    <div class="col-lg-12 text-center">
+				                        <h2 class="section-heading">Nuestros Proyectos</h2>
+				                    </div>
+				                    <div class="col-lg-9 text-center">
+				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+				                    </div>
+				                </div>
+				                <div class="row">
+				    <?php    foreach ($nuestros_proyectos_lista as $article) {
+				          ?>	
+				                    <div class="col-md-4 col-sm-12 portfolio-item portmargin">
+				                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+				                            <div class="portfolio-hover">
+				                                <div class="portfolio-hover-content">
+				                                    <i class="fa fa-plus fa-3x"></i>
+				                                </div>
+				                            </div>
+				                            <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Nuestros Proyectos" title="Nuestros Proyectos">
+				                        </a>
+				                        <p class="date-projects"><?php echo esc_html( $article->post_date ); ?></p>
+				                        <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
+				                        <p class="text-note"><?php echo esc_html( $article->post_excerpt ); ?></p>
+				                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                    </div>
+						<?php }  ?>
+
+								</div>
 				            </div>
 				        </section>
+
+
+	     <!-- Sección Plan de Formación -->
+        
+        <section id="portfolio" class="formacion">
+            
+            <div class="container">
+                <div class="row row-titles-formacion">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Plan de Formación</h2>
+                    </div>
+                    <div class="col-lg-11 text-center">
+                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+                    </div>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+         <?php    foreach ($plan_de_formacion_lista as $article) {
+         ?>		
+                    <div class="carousel-item active">
+                        <div class="col-lg-12">
+                            <div class="row row-formacion">
+                                <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item">
+                                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fa fa-plus fa-1x"></i>
+                                            </div>
+                                        </div>
+                                        <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Formacion" title="Formacion">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item formacion-item">
+                                    <p class="date"><?php echo esc_html( $article->post_date ); ?></p>
+                                    <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
+                                    <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+		<?php }  ?>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left fa-4x" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <i class="fa fa-angle-right fa-4x" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+        </section>   
 		<?php		        
 			//the_posts_navigation();
 
