@@ -43,31 +43,49 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+		    <div class="container">
+            <div class="social">
+                <form action="" autocomplete="on">
+                    <input id="search" name="search" type="text" placeholder="¿Qué estás buscando?"><input id="search_submit" value="Rechercher" type="submit">
+                </form>
+                <a class="hvr-float-shadow"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a class="hvr-float-shadow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a class="hvr-float-shadow"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'grupomiquel' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+	   <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="wp-content/uploads/2017/11/somos-miquel.png" alt="Somos Miquel" title="Somos Miquel" class="img-responsive"></a>
+                <button class="navbar-toggler navbar-toggler-bottom" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
+                <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link hvr-float js-scroll-trigger" href="protagonistas.html">PROTAGONISTAS</a>
+                        </li>
+                        <li class="separador">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link hvr-float js-scroll-trigger" href="#portfolio">VALORES</a>
+                        </li>
+                        <li class="separador">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link hvr-float js-scroll-trigger crece" href="#about">CRECE CON MIQUEL</a>
+                        </li>
+                        <li class="separador">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link hvr-float js-scroll-trigger" href="#team">INICIATIVAS</a>
+                        </li>
+                        <li class="separador">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link hvr-float js-scroll-trigger" href="#contact">FORMACIÓN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

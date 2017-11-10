@@ -54,19 +54,31 @@ global $post;
 					array_push( $nuestros_proyectos_lista, $post );
 					$numero_nuestros_proyectos++;
 				}
-				elseif 	( in_category( 'proyecto-de-formacion' ) ){
+				elseif 	( in_category( 'plan-de-formacion' ) ){
 					array_push( $plan_de_formacion_lista, $post );
 				}
 
 			endwhile;
 				/*	grupomiquel_console($promocionados_lista); 
 					grupomiquel_console($valores_miquel_lista); 
-					grupomiquel_console($nuestros_proyectos_lista); */
+					grupomiquel_console($nuestros_proyectos_lista); 
+				grupomiquel_console($plan_de_formacion_lista);*/
+
+?>
+    		<!-- Header -->
+			        <header class="masthead">
+			            <div class="container">
+			                <div class="intro-text">
+			                    <div class="intro-lead-in animated fadeInLeft">El equipo de Albacete<br>nos cuenta detalles<br>de su apertura.</div>
+			                    <div class="intro-heading animated fadeIn">¡Felicidades!</div>
+			                </div>
+			            </div>
+			        </header>
+
+
+			<!-- Sección Promocionados -->
 		
 
-			/* Sección Promocionados */
-		
-?>
 						<section id="promocionados" class="post">
 				            <div class="container container- animated fadeInUp">
 				                <div class="row row-titles">
@@ -169,7 +181,7 @@ global $post;
 				                    </div>
 				                </div>
 				            </div>
-				        </section> -->
+				        </section> 
 
 
 			  <!-- Sección Nuestros Proyectos -->
@@ -224,7 +236,7 @@ global $post;
                   <div class="carousel-inner" role="listbox">
          <?php    foreach ($plan_de_formacion_lista as $article) {
          ?>		
-                    <div class="carousel-item active">
+                    <div class="carousel-item <?php if ($plan_de_formacion_lista[0] === $article ) echo esc_attr('active') ?> "> 
                         <div class="col-lg-12">
                             <div class="row row-formacion">
                                 <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item">
