@@ -60,7 +60,7 @@ global $post;
 
 			endwhile;
 				/*	grupomiquel_console($promocionados_lista); 
-					grupomiquel_console($valores_miquel_lista); 
+				/*	grupomiquel_console($valores_miquel_lista); 
 					grupomiquel_console($nuestros_proyectos_lista); 
 				grupomiquel_console($plan_de_formacion_lista);*/
 

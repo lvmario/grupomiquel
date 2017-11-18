@@ -6,49 +6,54 @@
  *
  * @package grupomiquel
  */
-
+$categoria = get_the_category($post->ID);
+$categoria_url = get_category_link ($categoria->term_id);
+//grupomiquel_console($categoria); 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		<section>
+            <div class="container animated fadeIn">
+                <div class="row">
+                    <div class="col-lg-12 text-center nuestros-protagonistas">
+               <?php     	
+                        	if ( is_singular() ) :
+								the_title( '<h2 class="section-heading">', '</h2>' );
+							else :
+								the_title( '<h2 class="section-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+							endif;
+				?>						
+                    </div>
+                    <div class="col-lg-9 text-center">
+                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php grupomiquel_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'grupomiquel' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+        <section>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 note">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="<?php echo esc_url( $categoria_url ); ?>"><?php echo esc_html( $categoria[0]->name ); ?></a></li>
+                            <li class="breadcrumb-item active"><?php echo esc_html( $post->post_title ); ?></li>
+                        </ol>  
+                        <p class="date"><?php echo esc_html( $post->post_date ); ?></p>
+                        <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
+                       <?php the_content(); ?>
+    					
+                        <p class="share"><span>Compartir</span> <i class="fa fa-facebook-official" aria-hidden="true"></i><i class="fa fa-twitter-square" aria-hidden="true"></i><i class="fa fa-google" aria-hidden="true"></i><i class="fa fa-envelope" aria-hidden="true"></i>
+</p>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grupomiquel' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php grupomiquel_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+     </div>
+                </div>
+            
+            </div>
+            
+        </section>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -175,3 +175,46 @@ function grupomiquel_console( $array ) {
 	print_r( $array );
 	print '</pre>';
 }
+
+function grupomiquel_get_related_articles( $options = array() ) {
+	$i = 1;
+	$position = 0;
+	$related_articles = array();
+	$posts_per_page = 3;
+
+	$args = array(
+		'post_status' => 'publish',
+		'posts_per_page' => $posts_per_page,
+		'cat' => $options['cat'],
+		'paged' => $options['paged'],
+		'suppress_filters' => false,
+	);
+
+	$cache_key = md5( serialize( $args ) );
+	$the_query = wp_cache_get( $cache_key, 'related_articles' );
+	if ( false === $the_query ) {
+		$the_query = new WP_Query( $args );
+		wp_cache_set( $cache_key, $the_query, 'related_articles', MINUTE_IN_SECONDS * 30 );
+	}
+
+	if ( $the_query->have_posts() ) {
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+			$article = new stdClass();		
+
+			if ( is_array( $options['exclude'] ) && in_array( $the_query->post->ID, $options['exclude'] ) ) {
+	        	continue;
+	    	}
+			$article->title = $the_query->post->post_title;
+			$article->date = $the_query->post->post_date;
+			$article->permalink = get_permalink();
+			$article->excerpt = get_the_excerpt();
+			$related_articles[] = $article;
+			$position++;
+		endwhile;
+		wp_reset_postdata();
+	}
+
+	return $related_articles;
+
+}

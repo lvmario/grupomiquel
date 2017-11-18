@@ -39,8 +39,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grupomiquel' ); ?></a>
-
+	
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 		    <div class="container">
@@ -57,7 +56,7 @@
 
 	   <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="wp-content/uploads/2017/11/somos-miquel.png" alt="Somos Miquel" title="Somos Miquel" class="img-responsive"></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo esc_url( get_site_url().'/wp-content/uploads/2017/11/somos-miquel.png'); ?>" alt="Somos Miquel" title="Somos Miquel" class="img-responsive"></a>
                 <button class="navbar-toggler navbar-toggler-bottom" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
                 <i class="fa fa-bars"></i>
                 </button>
