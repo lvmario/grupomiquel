@@ -78,6 +78,7 @@ global $post;
 
 			<!-- Sección Promocionados -->
 		
+		  <?php if (! empty($promocionados_lista)): 	   ?> 
 
 						<section id="promocionados" class="post">
 				            <div class="container container- animated fadeInUp">
@@ -91,8 +92,8 @@ global $post;
 				                </div>
 				                <div class="row text-center promocionados">
 
-				          <?php    foreach ($promocionados_lista as $article) {
-				          ?>	
+				          <?php    foreach ($promocionados_lista as $article) {   ?>	
+				        
 				                    <div class="col-md-4">
 				                        <img src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' class="profile img-responsive" alt="Promocionado" title="Promocionado">
 				                        <h4 class="service-heading"><?php echo esc_html( $article->post_title ); ?></h4>
@@ -108,6 +109,7 @@ global $post;
 				            </div>
 				        </section>
 	
+	<?php   endif;  	?> 
 
 				 <!-- Sección Valores Miquel--> 
 			
