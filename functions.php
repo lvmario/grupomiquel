@@ -218,3 +218,18 @@ function grupomiquel_get_related_articles( $options = array() ) {
 	return $related_articles;
 
 }
+//Añadir soporte para svg
+function add_svg_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'add_svg_mime_types');
+
+function admin_custom_css() {
+    echo "<style>table.media .column-title .media-icon img[src*='.svg']{
+        width: 100%;
+        height: auto;
+    }</style>";
+}
+
+add_action( 'admin_head', 'admin_custom_css' );

@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                   <div class="col-md-4">
-                    <img src="<?php echo esc_url( get_site_url().'/wp-content/uploads/2017/11/logo-footer.jpg'); ?>" >
+                    <img src="<?php echo esc_url( get_template_directory_uri().'/img/logo-footer.jpg'); ?>" >
                   </div>
                     <div class="col-md-8">
                         <ul class="list-inline quicklinks">

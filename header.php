@@ -44,9 +44,8 @@
 		<div class="site-branding">
 		    <div class="container">
             <div class="social">
-                <form action="" autocomplete="on">
-                    <input id="search" name="search" type="text" placeholder="¿Qué estás buscando?"><input id="search_submit" value="Rechercher" type="submit">
-                </form>
+                <span class="lupa"></span>
+                    <?php get_search_form();?>
                 <a class="hvr-float-shadow"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                 <a class="hvr-float-shadow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a class="hvr-float-shadow"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -56,7 +55,7 @@
 
 	   <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo esc_url( get_site_url().'/wp-content/uploads/2017/11/somos-miquel.png'); ?>" alt="Somos Miquel" title="Somos Miquel" class="img-responsive"></a>
+                <a class="navbar-brand js-scroll-trigger" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri().'/img/somos-miquel.png');?>" alt="Somos Miquel" title="Somos Miquel" class="img-responsive"></a>
                 <button class="navbar-toggler navbar-toggler-bottom" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu
                 <i class="fa fa-bars"></i>
                 </button>

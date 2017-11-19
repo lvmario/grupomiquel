@@ -35,7 +35,10 @@
     width: 80%;
     color: #d42728;
     text-align: right;
+    top:3px;
+    min-height: 40px;
 }
+
 
 .fa-search{
     padding-right: 3em;
@@ -253,9 +256,15 @@ footer img{
     margin-bottom: 1em;
 }
 
-.social form input{
-    margin-right: 10em;
+input#search_submit, .lupa{
+    margin-right: 8.8em;
 }
+.search-field{
+    margin-right: 0px;
+    width: 260px;
+}
+.hvr-float-shadow{vertical-align: baseline !important;}
+
 
 input[type="text"] {
   height: 30px;
@@ -288,7 +297,7 @@ input[type="text"]:focus {
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
-input[type="submit"] {
+input[type="submit"], .lupa {
   height: 30px;
   width: 60px;
   display: inline-block;
@@ -298,7 +307,7 @@ input[type="submit"] {
   text-indent: -10000px;
   border: none;
   position: absolute;
-  top: 0;
+  top: -1px;
   right: 0;
   z-index: 2;
   cursor: pointer;
@@ -306,6 +315,8 @@ input[type="submit"] {
   cursor: pointer;
   transition: opacity .4s ease;
 }
+
+.search-form-header{display: none;}
 
 input[type="submit"]:hover {
   opacity: 0.8;
@@ -464,7 +475,7 @@ input[type="submit"]:hover {
         margin-top: .3em;
     }
     .masthead{
-        background-image:url(../img/header-bg-2.jpg) !important;
+        background-image:url(../../img/header-bg-2.jpg) !important;
     }
     .container-promocionados{
         margin-top: -18em;

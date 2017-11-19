@@ -35,13 +35,42 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'grupomiquel' ); ?></p>
+			    <!-- 404 -->
+        <section class="error">
+            <div class="container">
+                <div class="row row-titles">
+                    <div class="col-lg-12 text-center">
+                        <i class="fa fa-flash fa-3x"></i>
+                        <h2 class="section-heading">Ups! No hemos encontrado la página que buscas.</h2>
+                        <p>La página a la cual deseas acceder no existe o tiene un problema.</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <img class="img-responsive text-center" src="img/linea.png">
+                    </div>
+                </div>
+            </div>
+        </section>  
 			<?php
 				get_search_form();
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'grupomiquel' ); ?></p>
+			    <!-- 404 -->
+        <section class="error">
+            <div class="container">
+                <div class="row row-titles">
+                    <div class="col-lg-12 text-center">
+                        <i class="fa fa-flash fa-3x"></i>
+                        <h2 class="section-heading">Ups! No hemos encontrado la página que buscas.</h2>
+                        <p>La página a la cual deseas acceder no existe o tiene un problema.</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <img class="img-responsive text-center" src="img/linea.png">
+                    </div>
+                </div>
+            </div>
+        </section>  
+        
 			<?php
 				get_search_form();
 

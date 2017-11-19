@@ -92,13 +92,13 @@ $i=1;
   		 
 	<?php
 	} 	
-						$x=$i-2;
-						if (  ($x % 3 ) === 0 ){ ?>
+						$x=$i-1;
+						if  (  x != 0 && 0 === $x % 3 ){ ?>
 							</div>
 						<div class="row">
 
 <?php					}	
-	echo ($i);
+	
 	$i++;
 
 	endwhile;	?>
