@@ -112,6 +112,8 @@ global $post;
 	<?php   endif;  	?> 
 
 				 <!-- Sección Valores Miquel--> 
+
+	  <?php if (! empty($valores_miquel_lista)): 	   ?> 			 
 			
 				        <section id="portfolio" class="bg-light post">
 				            <div class="container">
@@ -184,7 +186,9 @@ global $post;
 				                </div>
 				            </div>
 				        </section> 
+	<?php   endif;  	?> 
 
+  <?php if (! empty($nuestros_proyectos_lista)): 	   ?> 	
 
 			  <!-- Sección Nuestros Proyectos -->
 				        <section id="portfolio">
@@ -220,8 +224,10 @@ global $post;
 				            </div>
 				        </section>
 
-
+	<?php   endif;  	?>			        
 	     <!-- Sección Plan de Formación -->
+
+   <?php if (! empty($plan_de_formacion_lista)): 	   ?> 	
         
         <section id="portfolio" class="formacion">
             
@@ -272,6 +278,7 @@ global $post;
                 </div>
             </div>
         </section>   
+    <?php   endif;  	?>	    
 		<?php		        
 			//the_posts_navigation();
 
