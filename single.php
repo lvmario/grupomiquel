@@ -35,6 +35,7 @@ get_header();
 
 	$articulos_relacionados=grupomiquel_get_related_articles(	array(
 		'cat' => $categoria[0]->term_id,
+        'exclude'=>$post->ID,
 		));
 ?>
 
@@ -46,7 +47,7 @@ get_header();
                         <a class="portfolio-link" data-toggle="modal" href="<?php echo esc_url( $article->permalink ); ?>">
                             <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>'>
                         </a>
-                        <p class="date-projects"><?php echo esc_html( $article->date ); ?></p>
+                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->date ))); ?></p>
                         <p class="title-note"><?php echo esc_html( $article->title ); ?></p>
                         <p class="text-note"><?php echo esc_html( $article->excerpt ); ?></p>
                         <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url( $article->permalink ); ?>" >Leer más</a></button>

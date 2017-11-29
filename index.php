@@ -97,7 +97,7 @@ global $post;
 				                    <div class="col-md-4">
 				                        <a href="<?php echo esc_url($article->guid);?>">  <img src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' class="profile img-responsive" alt="Promocionado" title="Promocionado"></a>
 				                        <h4 class="service-heading"><?php echo esc_html( $article->post_title ); ?></h4>
-				                        <p class="sector"><?php //get_post_meta( $post->ID, 'horoscopo_work', $single = true ); ?></p>
+				                        <p class="sector"><?php echo esc_html(get_post_meta( $article->ID, 'rol_promocionado', $single = true )); ?></p>
 				                        <span class="line2">-</span>
 				                        <p class="text-muted"><?php echo esc_html( $article->post_excerpt ); ?></p>
 				                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>" style="">Leer más</a></button>
