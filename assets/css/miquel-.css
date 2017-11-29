@@ -403,6 +403,9 @@ input[type="submit"]:hover {
     margin: 0 .5em;
 }
 
+/** Customized **/
+button a {color:white;}
+button a:hover {color:white;text-decoration: none; }
 /****** MEDIA ******/
 
 /** HOME **/

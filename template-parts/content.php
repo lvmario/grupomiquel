@@ -16,13 +16,13 @@ $categoria_url = get_category_link ($categoria->term_id);
 		<section>
             <div class="container animated fadeIn">
                 <div class="row">
-                    <div class="col-lg-12 text-center nuestros-protagonistas">
-               <?php     	
-                        	if ( is_singular() ) :
+                    <div class="col-lg-12 text-center nuestros-protagonistas">    	
+                     <h2 class="section-heading"> <?php echo esc_html( $categoria[0]->name ); ?></h2><?php
+                        /*	if ( is_singular() ) :
 								the_title( '<h2 class="section-heading">', '</h2>' );
 							else :
 								the_title( '<h2 class="section-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-							endif;
+							endif;*/
 				?>						
                     </div>
                     <div class="col-lg-9 text-center">
@@ -43,7 +43,7 @@ $categoria_url = get_category_link ($categoria->term_id);
                             <li class="breadcrumb-item"><a href="<?php echo esc_url( $categoria_url ); ?>"><?php echo esc_html( $categoria[0]->name ); ?></a></li>
                             <li class="breadcrumb-item active"><?php echo esc_html( $post->post_title ); ?></li>
                         </ol>  
-                        <p class="date"><?php echo esc_html( $post->post_date ); ?></p>
+                        <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
                         <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
                        <?php the_content(); ?>
     					

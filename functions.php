@@ -205,6 +205,7 @@ function grupomiquel_get_related_articles( $options = array() ) {
 			if ( is_array( $options['exclude'] ) && in_array( $the_query->post->ID, $options['exclude'] ) ) {
 	        	continue;
 	    	}
+	    	$article->ID=$the_query->post->ID;
 			$article->title = $the_query->post->post_title;
 			$article->date = $the_query->post->post_date;
 			$article->permalink = get_permalink();
@@ -233,3 +234,48 @@ function admin_custom_css() {
 }
 
 add_action( 'admin_head', 'admin_custom_css' );
+
+function add_custom_boxes(){
+	global $post;
+	$categories = get_the_category($post);
+	$category = wp_list_pluck($categories, 'slug');
+
+			add_meta_box(
+				'rol_promocionado',
+				'Extra Info',
+				'info_promocionado',
+				'post',
+				'side',
+				'high'
+			);
+		
+
+	} 
+add_action( 'admin_init', 'add_custom_boxes' );
+
+function info_promocionado(){
+	global $post;
+	$rol_promocionado = get_post_meta( $post->ID, 'rol_promocionado', $single = true );
+
+?>
+	<span><b>Rol</b></span><span style="font-size:80%;">-solo para Promocionados</span>
+	<input type="text" name="rol_promocionado" value="<?php echo esc_attr( $rol_promocionado ); ?>" style="width:100%;" />
+
+<?php }
+
+
+function save_postdata(){
+	global $post;
+if ( isset( $_POST['post_type'] ) && 'post' === $_POST[ 'post_type' ] )  {
+		// Remove Action to prevent recursivity
+		remove_action( 'save_post', 'save_postdata' );
+
+		if( isset( $_POST["rol_promocionado"] ) && $_POST["rol_promocionado"] != '' ) :
+			update_post_meta($post->ID, "rol_promocionado", sanitize_text_field( $_POST["rol_promocionado"] ) );
+		else:
+			delete_metadata( 'post', $post->ID, 'rol_promocionado' );
+		endif;
+	}
+	add_action( 'save_post', 'save_postdata' );
+}
+add_action( 'save_post', 'save_postdata' );

@@ -95,12 +95,12 @@ global $post;
 				          <?php    foreach ($promocionados_lista as $article) {   ?>	
 				        
 				                    <div class="col-md-4">
-				                        <img src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' class="profile img-responsive" alt="Promocionado" title="Promocionado">
+				                        <a href="<?php echo esc_url($article->guid);?>">  <img src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' class="profile img-responsive" alt="Promocionado" title="Promocionado"></a>
 				                        <h4 class="service-heading"><?php echo esc_html( $article->post_title ); ?></h4>
 				                        <p class="sector"><?php //get_post_meta( $post->ID, 'horoscopo_work', $single = true ); ?></p>
 				                        <span class="line2">-</span>
 				                        <p class="text-muted"><?php echo esc_html( $article->post_excerpt ); ?></p>
-				                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>" style="">Leer más</a></button>
 				                    </div>
 
 				          <?php   }  	?> 
@@ -135,14 +135,14 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[0]->ID); ?>' alt="Valores Miquel" title="Valores Miquel">
+				                                    <a href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a><img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[0]->ID); ?>' alt="Valores Miquel" title="Valores Miquel"></a>
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                                <p class="date"><?php echo esc_html( $valores_miquel_lista[0]->post_date ); ?></p>
+				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ($valores_miquel_lista[0]->post_date))); ?></p>
 				                                <p class="title-note"><span class="cien"><?php echo esc_html( $valores_miquel_lista[0]->post_title ); ?></p>
 				                                <p class="text-note"><?php echo esc_html( $valores_miquel_lista[0]->post_excerpt); ?></p>
-				                                <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                                <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a></button>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -155,13 +155,13 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[1]->ID); ?>' alt="Valores Miquel" title="Valores Miquel">
+				                                   <a href="<?php echo esc_url($valores_miquel_lista[1]->guid);?>"> <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[1]->ID); ?>' alt="Valores Miquel" title="Valores Miquel"></a>
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                                <p class="date-small"><?php echo esc_html( $valores_miquel_lista[1]->post_date ); ?></p>
+				                                <p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[1]->post_date ))); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[1]->post_title ); ?></p>
-				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</button>
+				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[1]->guid);?>" style="">Leer más</a></button>
 				                            </div>
 				                        </div>
 				                        <div class="row">
@@ -172,13 +172,13 @@ global $post;
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[2]->ID);?>' alt="Valores Miquel" title="Valores Miquel">
+				                                   <a href="<?php echo esc_url($valores_miquel_lista[2]->guid);?>">  <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[2]->ID);?>' alt="Valores Miquel" title="Valores Miquel"></a>
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                               	<p class="date-small"><?php echo esc_html( $valores_miquel_lista[2]->post_date ); ?></p>
+				                               	<p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[2]->post_date ))); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[2]->post_title ); ?></p>
-				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</button>
+				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[2]->guid);?>" style="">Leer más</a></button>
 				                            </div>
 				                        </div>
 				                        
@@ -211,12 +211,12 @@ global $post;
 				                                    <i class="fa fa-plus fa-3x"></i>
 				                                </div>
 				                            </div>
-				                            <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Nuestros Proyectos" title="Nuestros Proyectos">
+				                           <a href="<?php echo esc_url($article->guid);?>">  <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Nuestros Proyectos" title="Nuestros Proyectos"></a>
 				                        </a>
-				                        <p class="date-projects"><?php echo esc_html( $article->post_date ); ?></p>
+				                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
 				                        <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
 				                        <p class="text-note"><?php echo esc_html( $article->post_excerpt ); ?></p>
-				                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+				                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>">Leer más</a></button>
 				                    </div>
 						<?php }  ?>
 
@@ -254,13 +254,13 @@ global $post;
                                                 <i class="fa fa-plus fa-1x"></i>
                                             </div>
                                         </div>
-                                        <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Formacion" title="Formacion">
+                                       <a href="<?php echo esc_url($article->guid);?>"> <img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Formacion" title="Formacion"></a>
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item formacion-item">
-                                    <p class="date"><?php echo esc_html( $article->post_date ); ?></p>
+                                    <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
                                     <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
-                                    <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+                                    <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>">Leer más</a></button>
                                 </div>
                             </div>
                         </div>

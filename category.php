@@ -53,7 +53,7 @@ $i=1;
 				                                </a>
 				                            </div>
 				                            <div class="col-lg-5 col-md-12 col-sm-12 protago-items protago-items-margin">
-				                                <p class="date"><?php echo esc_html( $post->post_date ); ?></p>
+				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 				                                <a href="<?php echo esc_url( get_permalink() ); ?>" class="title-note link"><?php echo esc_html( $post->post_title );?></a>
 				                                <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
 				                                <a href="protagonistas-interna.html" class="btn btn-primary hvr-float-shadow">Leer más</a>
@@ -73,7 +73,7 @@ $i=1;
 					                        <a class="portfolio-link" data-toggle="modal" href="<?php echo esc_url( $post->post_permalink ); ?>">
 					                            <img class="img-fluid img-responsive" src="<?php echo get_the_post_thumbnail_url($post->post_ID); ?>">
 					                        </a>
-					                        <p class="date-projects"><?php echo esc_html( $post->post_date ); ?></p>
+					                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 					                        <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
 					                        <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
 					                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
@@ -84,7 +84,7 @@ $i=1;
 					                        <a class="portfolio-link" data-toggle="modal" href="<?php echo esc_url( $post->post_permalink ); ?>">
 					                            <img class="img-fluid img-responsive" src="<?php echo get_the_post_thumbnail_url($post->post_ID); ?>">
 					                        </a>
-					                        <p class="date-projects"><?php echo esc_html( $post->post_date ); ?></p>
+					                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 					                        <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
 					                        <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
 					                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
