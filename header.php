@@ -62,7 +62,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link hvr-float js-scroll-trigger" href="/categoria/promocionados">PROTAGONISTAS</a>
+                            <a class="nav-link hvr-float js-scroll-trigger" href="/categoria/protagonistas">PROTAGONISTAS</a>
                         </li>
                         <li class="separador">|</li>
                         <li class="nav-item">
