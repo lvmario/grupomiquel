@@ -56,7 +56,7 @@ $i=1;
 				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 				                                <a href="<?php echo esc_url( get_permalink() ); ?>" class="title-note link"><?php echo esc_html( $post->post_title );?></a>
 				                                <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
-				                                <a href="<?php echo esc_url($article->guid);?>" class="btn btn-primary hvr-float-shadow">Leer más</a>
+				                                <a href="<?php echo esc_url($post->guid);?>" class="btn btn-primary hvr-float-shadow">Leer más</a>
 				                            </div>
 				                        </div>
 				                    </div>
