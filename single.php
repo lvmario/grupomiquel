@@ -49,7 +49,7 @@ get_header();
                         <p class="date-projects"><?php echo esc_html( $article->date ); ?></p>
                         <p class="title-note"><?php echo esc_html( $article->title ); ?></p>
                         <p class="text-note"><?php echo esc_html( $article->excerpt ); ?></p>
-                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url( $article->permalink ); ?>" >Leer más</a></button>
                     </div>
         <?php     }    ?>
                 </div>

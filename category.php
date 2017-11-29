@@ -56,7 +56,7 @@ $i=1;
 				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 				                                <a href="<?php echo esc_url( get_permalink() ); ?>" class="title-note link"><?php echo esc_html( $post->post_title );?></a>
 				                                <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
-				                                <a href="protagonistas-interna.html" class="btn btn-primary hvr-float-shadow">Leer más</a>
+				                                <a href="<?php echo esc_url($article->guid);?>" class="btn btn-primary hvr-float-shadow">Leer más</a>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -76,7 +76,7 @@ $i=1;
 					                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 					                        <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
 					                        <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
-					                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+					                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($post->guid);?>" style="">Leer más</a></button>
 					                    </div>
              
 <?php  } else   { ?>
@@ -87,7 +87,7 @@ $i=1;
 					                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
 					                        <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
 					                        <p class="text-note"><?php echo esc_html( $post->post_excerpt ); ?></p>
-					                        <button type="button" class="btn btn-primary hvr-float-shadow">Leer más</button>
+					                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($post->guid);?>" style="">Leer más</a></button>
 					                    </div>
   		 
 	<?php
