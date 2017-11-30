@@ -50,7 +50,7 @@ get_header();
                         <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->date ))); ?></p>
                         <p class="title-note"><?php echo esc_html( $article->title ); ?></p>
                         <p class="text-note"><?php echo esc_html( $article->excerpt ); ?></p>
-                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url( $article->permalink ); ?>" >Leer más</a></button>
+                        <a href="<?php echo esc_url( $article->permalink ); ?>" class="btn btn-primary hvr-float-shadow">Leer más</a>
                     </div>
         <?php     }    ?>
                 </div>

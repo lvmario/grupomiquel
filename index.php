@@ -100,7 +100,7 @@ global $post;
 				                        <p class="sector"><?php echo esc_html(get_post_meta( $article->ID, 'rol_promocionado', $single = true )); ?></p>
 				                        <span class="line2">-</span>
 				                        <p class="text-muted"><?php echo esc_html( $article->post_excerpt ); ?></p>
-				                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>" style="">Leer más</a></button>
+				                        <a href="<?php echo esc_url($article->guid);?>" class="btn btn-primary hvr-float-shadow">Leer más</a>
 				                    </div>
 
 				          <?php   }  	?> 
@@ -142,7 +142,7 @@ global $post;
 				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ($valores_miquel_lista[0]->post_date))); ?></p>
 				                                <p class="title-note"><span class="cien"><?php echo esc_html( $valores_miquel_lista[0]->post_title ); ?></p>
 				                                <p class="text-note"><?php echo esc_html( $valores_miquel_lista[0]->post_excerpt); ?></p>
-				                                <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a></button>
+				                              	<a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -161,7 +161,7 @@ global $post;
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
 				                                <p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[1]->post_date ))); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[1]->post_title ); ?></p>
-				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[1]->guid);?>" style="">Leer más</a></button>
+				                                <a href="<?php echo esc_url($valores_miquel_lista[1]->guid);?>" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</a>
 				                            </div>
 				                        </div>
 				                        <div class="row">
@@ -178,7 +178,7 @@ global $post;
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
 				                               	<p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[2]->post_date ))); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[2]->post_title ); ?></p>
-				                                <button type="button" class="btn btn-primary btn-primary-small hvr-float-shadow"><a href="<?php echo esc_url($valores_miquel_lista[2]->guid);?>" style="">Leer más</a></button>
+				                                <a href="<?php echo esc_url($valores_miquel_lista[2]->guid);?>" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</a>
 				                            </div>
 				                        </div>
 				                        
@@ -216,7 +216,7 @@ global $post;
 				                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
 				                        <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
 				                        <p class="text-note"><?php echo esc_html( $article->post_excerpt ); ?></p>
-				                        <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>">Leer más</a></button>
+				                        <a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($article->guid);?>">Leer más</a>
 				                    </div>
 						<?php }  ?>
 
