@@ -42,7 +42,7 @@ global $post;
 			/*Guardo los posts de cada categoría en un array distinto*/
 			while ( have_posts() ) : the_post();
 
-				if ( in_category( 'promocionados' ) && $numero_promocionados < 4){
+				if ( in_category( 'crece-con-miquel' ) && $numero_promocionados < 4){
 					array_push( $promocionados_lista, $post );	
 					$numero_promocionados++;
 				}
@@ -50,7 +50,7 @@ global $post;
 					array_push( $valores_miquel_lista, $post );	
 					$numero_valores_miquel++;
 				}
-				elseif 	( in_category( 'nuestros-proyectos' ) && $numero_nuestros_proyectos < 4){
+				elseif 	( in_category( 'iniciativas' ) && $numero_nuestros_proyectos < 4){
 					array_push( $nuestros_proyectos_lista, $post );
 					$numero_nuestros_proyectos++;
 				}
@@ -76,7 +76,7 @@ global $post;
 			        </header>
 
 
-			<!-- Sección Promocionados -->
+			<!-- Sección Crece con Miquel -->
 		
 		  <?php if (! empty($promocionados_lista)): 	   ?> 
 
@@ -84,7 +84,7 @@ global $post;
 				            <div class="container container- animated fadeInUp">
 				                <div class="row row-titles">
 				                    <div class="col-lg-12 text-center">
-				                        <h2 class="section-heading">¡Los promocionados!</h2>
+				                        <h2 class="section-heading">Crece con Miquel</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
 				                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
@@ -190,12 +190,12 @@ global $post;
 
   <?php if (! empty($nuestros_proyectos_lista)): 	   ?> 	
 
-			  <!-- Sección Nuestros Proyectos -->
+			  <!-- Sección Iniciativas -->
 				        <section id="portfolio">
 				            <div class="container">
 				                <div class="row row-titles">
 				                    <div class="col-lg-12 text-center">
-				                        <h2 class="section-heading">Nuestros Proyectos</h2>
+				                        <h2 class="section-heading">Iniciativas</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
 				                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
