@@ -7,7 +7,7 @@
  * @package grupomiquel
  */
 $categoria = get_the_category($post->ID);
-$categoria_url = get_category_link ($categoria->term_id);
+$categoria_url = get_category_link ($categoria[0]->term_id);
 //grupomiquel_console($categoria); 
 ?>
 
@@ -40,7 +40,7 @@ $categoria_url = get_category_link ($categoria->term_id);
                 <div class="row">
                     <div class="col-md-9 note">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href=<?php echo "/categoria/". $categoria->term_id; ?>"> <?php echo esc_html( $categoria[0]->name ); ?></a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo esc_url( $categoria_url ); ?>"><?php echo esc_html( $categoria[0]->name ); ?></a></li>
                             <li class="breadcrumb-item active"><?php echo esc_html( $post->post_title ); ?></li>
                         </ol>  
                         <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
