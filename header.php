@@ -66,19 +66,19 @@
                         </li>
                         <li class="separador">|</li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-float js-scroll-trigger" href="categoria/valores-miquel">VALORES</a>
+                            <a class="nav-link hvr-float js-scroll-trigger" href="/categoria/valores-miquel">VALORES</a>
                         </li>
                         <li class="separador">|</li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-float js-scroll-trigger crece" href="categoria/crece-con-miquel">CRECE CON MIQUEL</a>
+                            <a class="nav-link hvr-float js-scroll-trigger crece" href="/categoria/crece-con-miquel">CRECE CON MIQUEL</a>
                         </li>
                         <li class="separador">|</li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-float js-scroll-trigger" href="categoria/nuestros-proyectos">INICIATIVAS</a>
+                            <a class="nav-link hvr-float js-scroll-trigger" href="/categoria/nuestros-proyectos">INICIATIVAS</a>
                         </li>
                         <li class="separador">|</li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-float js-scroll-trigger" href="categoria/plan-de-formacion">FORMACIÓN</a>
+                            <a class="nav-link hvr-float js-scroll-trigger" href="/categoria/plan-de-formacion">FORMACIÓN</a>
                         </li>
                     </ul>
                 </div>
