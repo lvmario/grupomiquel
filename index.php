@@ -69,8 +69,9 @@ global $post;
 			        <header class="masthead">
 			            <div class="container">
 			                <div class="intro-text">
-			                    <div class="intro-lead-in animated fadeInLeft">El equipo de Albacete<br>nos cuenta detalles<br>de su apertura.</div>
-			                    <div class="intro-heading animated fadeIn">¡Felicidades!</div>
+			                    <div class="intro-lead-in animated fadeInLeft">Conoce a los protagonistas<br><b>de Grupo Miquel.</b></div>
+								<a class="btn btn-primary btn-slider- hvr-float-shadow" href="http://grupomiquel.htmlawp.com/2017/11/27/somos-miquel-peroquienes-somos/">Leer más</a>
+			                    <!--<div class="intro-heading animated fadeIn">¡Felicidades!</div>-->
 			                </div>
 			            </div>
 			        </header>
