@@ -406,7 +406,7 @@ input[type="submit"]:hover {
 /** Customized **/
 button a {color:white;}
 button a:hover {color:white;text-decoration: none; }
-img{width: 100%;}
+/*img{width: 100%;}*/
 img.line{width: 9px;}
 /****** MEDIA ******/
 

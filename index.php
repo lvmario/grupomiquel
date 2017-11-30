@@ -129,13 +129,13 @@ global $post;
 				                    <div class="col-lg-7 col-sm-12">
 				                        <div class="row">
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+				                                <a class="portfolio-link" data-toggle="modal" href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">
 				                                    <div class="portfolio-hover">
 				                                        <div class="portfolio-hover-content">
 				                                            <i class="fa fa-plus fa-1x"></i>
 				                                        </div>
 				                                    </div>
-				                                    <a href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a><img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[0]->ID); ?>' alt="Valores Miquel" title="Valores Miquel"></a>
+													<img class="img-fluid" src='<?php echo get_the_post_thumbnail_url($valores_miquel_lista[0]->ID); ?>' alt="Valores Miquel" title="Valores Miquel"></a>
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
