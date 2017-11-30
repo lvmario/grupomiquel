@@ -30,7 +30,7 @@ $i=1;
 				          <?php     the_archive_title( '<h2 class="section-heading">', '</h2>' ); ?>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                          <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+				                          <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				            </div>

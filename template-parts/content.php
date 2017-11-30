@@ -26,7 +26,7 @@ $categoria_url = get_category_link ($categoria->term_id);
 				?>						
                     </div>
                     <div class="col-lg-9 text-center">
-                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
                     </div>
                 </div>
             </div>

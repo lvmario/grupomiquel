@@ -44,7 +44,7 @@
                         <p>La página a la cual deseas acceder no existe o tiene un problema.</p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <img class="img-responsive text-center" src="img/linea.png">
+                        <img class="img-responsive text-center line" src="img/linea.png">
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <p>La página a la cual deseas acceder no existe o tiene un problema.</p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <img class="img-responsive text-center" src="img/linea.png">
+                        <img class="img-responsive text-center line" src="img/linea.png">
                     </div>
                 </div>
             </div>

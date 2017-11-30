@@ -87,7 +87,7 @@ global $post;
 				                        <h2 class="section-heading">¡Los promocionados!</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+				                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				                <div class="row text-center promocionados">
@@ -122,7 +122,7 @@ global $post;
 				                        <h2 class="section-heading">Valores Miquel</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+				                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				                <div class="row">
@@ -198,7 +198,7 @@ global $post;
 				                        <h2 class="section-heading">Nuestros Proyectos</h2>
 				                    </div>
 				                    <div class="col-lg-9 text-center">
-				                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+				                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
 				                    </div>
 				                </div>
 				                <div class="row">
@@ -237,7 +237,7 @@ global $post;
                         <h2 class="section-heading">Plan de Formación</h2>
                     </div>
                     <div class="col-lg-11 text-center">
-                        <img class="img-responsive text-center" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
+                        <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
                     </div>
                 </div>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -260,7 +260,7 @@ global $post;
                                 <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item formacion-item">
                                     <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
                                     <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
-                                    <button type="button" class="btn btn-primary hvr-float-shadow"><a href="<?php echo esc_url($article->guid);?>">Leer más</a></button>
+                                    <a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($article->guid);?>">Leer más</a>
                                 </div>
                             </div>
                         </div>
