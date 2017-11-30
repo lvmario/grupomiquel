@@ -571,20 +571,12 @@ img.line{width: 9px;}
         margin-top: -10px;
     }
 }
-header.masthead {
-            height: 450px;
-        }
+@media (max-width: 400px){
+    .profile{max-width: 300px;}
+}
 @media (max-width: 1500px){
     .profile{max-width: 500px;}
 }
 @media (max-width: 1200px){
     .profile{max-width: 400px;}
-}
-@media (max-width: 768px){
-        header.masthead {
-            height: 200px;
-        }
-@media (max-width: 400px){
-    .profile{max-width: 300px;}
-
 }
