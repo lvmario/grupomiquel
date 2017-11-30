@@ -407,7 +407,7 @@ input[type="submit"]:hover {
 /** Customized **/
 button a {color:white;}
 button a:hover {color:white;text-decoration: none; }
-.note img, .note iframe{width: 100%;}
+
 img.line{width: 9px;}
 /****** MEDIA ******/
 
@@ -507,7 +507,7 @@ img.line{width: 9px;}
         margin-bottom: 2em;
     }
     .text-muted{
-        margin: 0em 6em 3em 6em;
+        margin: 0em 1em 3em 1em;
     }
     .portfolio-item{
         padding: 0em 4em 2em 4em;
@@ -528,6 +528,7 @@ img.line{width: 9px;}
     .protago-items{
         padding: 1em 0 0 2.2em;
     }
+    .note img, .note iframe{width: 100%;}
 }
 
 
