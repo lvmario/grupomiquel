@@ -482,9 +482,9 @@ img.line{width: 9px;}
         font-weight: 100;
         margin-top: .3em;
     }
-    .masthead{
-        background-image:url(../../img/header-bg-2.jpg) !important;
-    }
+/*    .masthead{
+        background-image:url("../../../../../wp-content/uploads/slider.jpg") !important;
+    }*/
     .container-promocionados{
         margin-top: -18em;
     }
@@ -528,7 +528,7 @@ img.line{width: 9px;}
     .protago-items{
         padding: 1em 0 0 2.2em;
     }
-    .note img, .note iframe{width: 100%;}
+    .note img, .note iframe{width: 100%; height: auto;}
 }
 
 
