@@ -112,6 +112,7 @@ section{
 .profile{
     clip-path: circle(100px at center);
     margin-bottom: 1em;
+    max-width:400px;
 }
 
 .date, .text-note{
@@ -529,10 +530,6 @@ img.line{width: 9px;}
     }
 }
 
-@media (max-width: 400px){
-    img.profile{max-width: 300px;}
-}
-
 
 @media (max-width: 990px){
     .protago-items-margin{
@@ -573,5 +570,6 @@ img.line{width: 9px;}
         margin-top: -10px;
     }
 }
-
-
+@media (max-width: 400px){
+    .profile{max-width: 300px;}
+}
