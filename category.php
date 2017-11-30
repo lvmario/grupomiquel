@@ -17,7 +17,9 @@ $i=1;
 		<main id="main" class="site-main">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+			$categoria = get_the_category($post->ID);
+			?>
 
 						<!-- Red -->
 				    <section class="red"></section>
@@ -27,7 +29,7 @@ $i=1;
 				            <div class="container animated fadeIn">
 				                <div class="row">
 				                    <div class="col-lg-12 text-center nuestros-protagonistas">
-				          <?php     the_archive_title( '<h2 class="section-heading">', '</h2>' ); ?>
+				           				<h2 class="section-heading"> <?php echo esc_html( $categoria[0]->name ); ?></h2> 
 				                    </div>
 				                    <div class="col-lg-9 text-center">
 				                          <img class="img-responsive text-center line" src='<?php echo esc_url(get_template_directory_uri())."/img/linea.png"; ?>'>
