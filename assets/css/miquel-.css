@@ -440,16 +440,9 @@ img.line{width: 9px;}
     .protago-item img{
         margin-top: 2em;
     }
-    img.profile{
-        max-width: 400px;
-    }
 }
 
-@media (max-width: 1500px){
-    img.profile{
-        max-width: 500px;
-    }
-}
+
 
 @media (max-width: 1000px){
     .social, .separador{
@@ -536,7 +529,7 @@ img.line{width: 9px;}
     }
 }
 
-@media (min-width: 400px){
+@media (max-width: 400px){
     img.profile{max-width: 300px;}
 }
 
