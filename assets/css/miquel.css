@@ -158,7 +158,7 @@ header.masthead {
       font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-transform: uppercase; } 
     img.profile{
-      width:400px;
+      max-width:400px;
     }  
     }
 
