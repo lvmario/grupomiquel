@@ -49,7 +49,7 @@ $i=1;
 				                        <div class="row">
 				                            <div class="col-lg-5 col-md-12 col-sm-12 protago-item">
 				                                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-				                                    <img class="img-fluid img-responsive" src="img/protagonistas/protagonisatas-1.jpg" alt="Protagonistas" title="Protagonistas">
+				                                    <img class="img-fluid img-responsive" src="<?php echo get_the_post_thumbnail_url($post->post_ID); ?>" alt="Protagonistas" title="Protagonistas">
 				                                </a>
 				                            </div>
 				                            <div class="col-lg-5 col-md-12 col-sm-12 protago-items protago-items-margin">
