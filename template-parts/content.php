@@ -43,7 +43,7 @@ $categoria_url = get_category_link ($categoria[0]->term_id);
                             <li class="breadcrumb-item"><a href="<?php echo esc_url( $categoria_url ); ?>"><?php echo esc_html( $categoria[0]->name ); ?></a></li>
                             <li class="breadcrumb-item active"><?php echo esc_html( $post->post_title ); ?></li>
                         </ol>  
-                        <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $post->post_date ))); ?></p>
+                        <p class="date"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $post->ID ) ) ); ?></p>
                         <p class="title-note"><?php echo esc_html( $post->post_title ); ?></p>
                        <?php the_content(); ?>
     					

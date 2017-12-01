@@ -140,7 +140,7 @@ global $post;
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                                <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ($valores_miquel_lista[0]->post_date))); ?></p>
+				                                <p class="date"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $valores_miquel_lista[0] ) ) ); ?></p>
 				                                <p class="title-note"><span class="cien"><?php echo esc_html( $valores_miquel_lista[0]->post_title ); ?></p>
 				                                <p class="text-note"><?php echo esc_html( $valores_miquel_lista[0]->post_excerpt); ?></p>
 				                              	<a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($valores_miquel_lista[0]->guid);?>">Leer más</a>
@@ -160,7 +160,7 @@ global $post;
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                                <p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[1]->post_date ))); ?></p>
+				                                <p class="date-small"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $valores_miquel_lista[1]->ID ) ) ); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[1]->post_title ); ?></p>
 				                                <a href="<?php echo esc_url($valores_miquel_lista[1]->guid);?>" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</a>
 				                            </div>
@@ -177,7 +177,7 @@ global $post;
 				                                </a>
 				                            </div>
 				                            <div class="col-md-6 col-sm-12 portfolio-item">
-				                               	<p class="date-small"><?php echo esc_html( date( "d/m/Y", strtotime ( $valores_miquel_lista[2]->post_date ))); ?></p>
+				                               	 <p class="date-small"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $valores_miquel_lista[2]->ID ) ) ); ?></p>
 				                                <p class="title-note-small"><span class="cien"><?php echo esc_html( $valores_miquel_lista[2]->post_title ); ?></p>
 				                                <a href="<?php echo esc_url($valores_miquel_lista[2]->guid);?>" class="btn btn-primary btn-primary-small hvr-float-shadow">Leer más</a>
 				                            </div>
@@ -214,7 +214,7 @@ global $post;
 				                            </div>
 				                           <a href="<?php echo esc_url($article->guid);?>">  <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>' alt="Nuestros Proyectos" title="Nuestros Proyectos"></a>
 				                        </a>
-				                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
+				                        <p class="date-projects"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $article->ID ) ) ); ?></p>
 				                        <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
 				                        <p class="text-note"><?php echo esc_html( $article->post_excerpt ); ?></p>
 				                        <a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($article->guid);?>">Leer más</a>
@@ -259,7 +259,7 @@ global $post;
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 portfolio-item formacion-item">
-                                    <p class="date"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->post_date ))); ?></p>
+                                    <p class="date"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $article->ID ) ) ); ?></p>
                                     <p class="title-note"><?php echo esc_html( $article->post_title ); ?></p>
                                     <a class="btn btn-primary hvr-float-shadow" href="<?php echo esc_url($article->guid);?>">Leer más</a>
                                 </div>

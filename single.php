@@ -47,7 +47,7 @@ get_header();
                         <a class="portfolio-link" data-toggle="modal" href="<?php echo esc_url( $article->permalink ); ?>">
                             <img class="img-fluid img-responsive" src='<?php echo get_the_post_thumbnail_url($article->ID); ?>'>
                         </a>
-                        <p class="date-projects"><?php echo esc_html( date( "d/m/Y", strtotime ( $article->date ))); ?></p>
+                        <p class="date-projects"><?php echo esc_html(gp_post_date( get_the_date( 'd F Y', $article->ID ) ) ); ?></p>
                         <p class="title-note"><?php echo esc_html( $article->title ); ?></p>
                         <p class="text-note"><?php echo esc_html( $article->excerpt ); ?></p>
                         <a href="<?php echo esc_url( $article->permalink ); ?>" class="btn btn-primary hvr-float-shadow">Leer más</a>

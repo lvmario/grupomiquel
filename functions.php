@@ -279,3 +279,44 @@ if ( isset( $_POST['post_type'] ) && 'post' === $_POST[ 'post_type' ] )  {
 	add_action( 'save_post', 'save_postdata' );
 }
 add_action( 'save_post', 'save_postdata' );
+
+
+
+function gp_post_date( $today ) {
+	return gp_translate_month( $today );
+}
+
+function gp_translate_month( $month ) {
+	$englishMonths = array(
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	 );
+	$spanishMonths = array(
+		'de Enero de',
+		'de Febrero de',
+		'de Marzo de',
+		'de Abril de',
+		'de Mayo de',
+		'de Junio de',
+		'de Julio de',
+		'de Agosto de',
+		'de Septiembre de',
+		'de Octubre de',
+		'de Noviembre de',
+		'de Diciembre de',
+	 );
+
+	$month = str_replace( $englishMonths, $spanishMonths, $month );
+
+	return $month;
+}
